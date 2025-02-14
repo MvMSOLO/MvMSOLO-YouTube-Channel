@@ -63,9 +63,9 @@
 
     <script>
         async function getSubscribers() {
-            const API_KEY = "AIzaSyAMItX7n3RChN1Tv-GvtnDU497Wd7hLtbc"; // O‘zingizning API kalitingizni qo‘ying
-            const CHANNEL_ID = "UCFrmniXG_EnNC8006SV8UhQ"; // YouTube kanal ID ni qo‘ying
-            const url = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${UCFrmniXG_EnNC8006SV8UhQ}&key=${AIzaSyAMItX7n3RChN1Tv-GvtnDU497Wd7hLtbc}`;
+            const API_KEY = "AIzaSyAMItX7n3RChN1Tv-GvtnDU497Wd7hLtbc";
+            const CHANNEL_ID = "UCFrmniXG_EnNC8006SV8UhQ";
+            const url = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CHANNEL_ID}&key=${API_KEY}`;
 
             try {
                 let response = await fetch(url);
