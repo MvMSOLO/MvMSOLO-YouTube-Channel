@@ -9,8 +9,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background: url('https://imgur.com/a/eNXXr2B') no-repeat center center fixed;
-            background-size: cover;
+            background: linear-gradient(135deg, #1a1a1a, #333333);
             color: white;
             text-align: center;
         }
@@ -18,27 +17,36 @@
             max-width: 800px;
             margin: auto;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.8);
             border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
         }
         h1 {
             margin-top: 20px;
             font-size: 36px;
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
         }
         iframe {
             width: 100%;
             height: 315px;
             border: none;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
         }
         .btn {
             display: inline-block;
             margin-top: 10px;
-            padding: 10px 20px;
+            padding: 12px 24px;
             background: red;
             color: white;
             text-decoration: none;
             border-radius: 5px;
             font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: darkred;
         }
     </style>
 </head>
