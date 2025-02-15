@@ -65,11 +65,11 @@
 </div>
 
 <script>
-    const API_KEY = "SIZNING_YOUTUBE_API_KEY";
+    const API_KEY = "AIzaSyAMItX7n3RChN1Tv-GvtnDU497Wd7hLtbc";
     const CHANNEL_ID = "UCFrmniXG_EnNC8006SV8UhQ";
 
     async function getSubscribers() {
-        const url = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CHANNEL_ID}&key=${API_KEY}`;
+        const url = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${UCFrmniXG_EnNC8006SV8UhQ}&key=${AIzaSyAMItX7n3RChN1Tv-GvtnDU497Wd7hLtbc}`;
         try {
             let response = await fetch(url);
             let data = await response.json();
@@ -82,7 +82,7 @@
     }
 
     async function getLatestLiveStream() {
-        const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&type=video&eventType=live&maxResults=1&key=${API_KEY}`;
+        const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${UCFrmniXG_EnNC8006SV8UhQ}&type=video&eventType=live&maxResults=1&key=${AIzaSyAMItX7n3RChN1Tv-GvtnDU497Wd7hLtbc}`;
         try {
             let response = await fetch(url);
             let data = await response.json();
@@ -101,7 +101,7 @@
     }
 
     async function getPopularVideo() {
-        const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&order=viewCount&type=video&maxResults=1&key=${API_KEY}`;
+        const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${UCFrmniXG_EnNC8006SV8UhQ}&order=viewCount&type=video&maxResults=1&key=${AIzaSyAMItX7n3RChN1Tv-GvtnDU497Wd7hLtbc}`;
         try {
             let response = await fetch(url);
             let data = await response.json();
