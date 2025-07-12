@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Clicker Tycoon RPG - Debug</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .debug-panel {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+            max-width: 300px;
+            z-index: 10000;
+        }
+        .debug-log {
+            max-height: 200px;
+            overflow-y: auto;
+            margin-top: 10px;
+        }
+        .debug-entry {
+            margin: 2px 0;
+            padding: 2px;
+        }
+        .debug-error { color: #ff6b6b; }
+        .debug-success { color: #51cf66; }
+        .debug-info { color: #74c0fc; }
+    </style>
+</head>
+<body>
+    <div class="debug-panel">
+        <h3>Debug Panel</h3>
+        <div id="debugStatus">Loading...</div>
+        <div class="debug-log" id="debugLog"></div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">🎮</div>
+            <h1>Epic Clicker Tycoon RPG</h1>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Loading your epic adventure...</p>
+        </div>
+    </div>
+
+    <!-- Main Game Container -->
+    <div id="gameContainer" class="game-container hidden">
+        <!-- Header -->
+        <header class="game-header">
+            <div class="header-left">
+                <div class="player-info">
+                    <span class="player-level">Level <span id="playerLevel">1</span></span>
+                    <div class="xp-bar">
+                        <div class="xp-fill" id="xpFill"></div>
+                        <span class="xp-text" id="xpText">0 / 100 XP</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-center">
+                <h1 class="game-title">Epic Clicker Tycoon RPG</h1>
+                <div class="game-version">v2.1.0 - Debug Mode</div>
+            </div>
+            
+            <div class="header-right">
+                <div class="currency-display">
+                    <div class="currency-item">
+                        <i class="fas fa-coins"></i>
+                        <span id="coinsDisplay">0</span>
+                    </div>
+                    <div class="currency-item">
+                        <i class="fas fa-gem"></i>
+                        <span id="diamondsDisplay">0</span>
+                    </div>
+                    <div class="currency-item">
+                        <i class="fas fa-star"></i>
+                        <span id="scoreDisplay">0</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="game-nav">
+            <button class="nav-tab active" data-tab="main">🏠 Main</button>
+            <button class="nav-tab" data-tab="shop">🛒 Shop</button>
+            <button class="nav-tab" data-tab="upgrades">⚡ Upgrades</button>
+            <button class="nav-tab" data-tab="inventory">🎒 Inventory</button>
+            <button class="nav-tab" data-tab="achievements">🏆 Achievements</button>
+            <button class="nav-tab" data-tab="bosses">👹 Bosses</button>
+            <button class="nav-tab" data-tab="minigames">🎮 Minigames</button>
+            <button class="nav-tab" data-tab="leaderboard">📊 Leaderboard</button>
+            <button class="nav-tab" data-tab="settings">⚙️ Settings</button>
+        </nav>
+
+        <!-- Main Game Area -->
+        <main class="game-main">
+            <!-- Main Clicking Area -->
+            <section id="mainTab" class="game-tab active">
+                <div class="clicking-area">
+                    <div class="clickable-object" id="clickableObject">
+                        <div class="object-sprite" id="objectSprite">🐉</div>
+                        <div class="object-name" id="objectName">Baby Dragon</div>
+                        <div class="object-level" id="objectLevel">Level 1</div>
+                    </div>
+                    
+                    <div class="click-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Click Power:</span>
+                            <span class="stat-value" id="clickPower">1</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Clicks per Second:</span>
+                            <span class="stat-value" id="cpsDisplay">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Total Clicks:</span>
+                            <span class="stat-value" id="totalClicks">0</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Other tabs would go here -->
+            <section id="shopTab" class="game-tab">
+                <h2>Shop (Debug)</h2>
+                <p>Shop system loaded: <span id="shopStatus">Loading...</span></p>
+            </section>
+
+            <section id="upgradesTab" class="game-tab">
+                <h2>Upgrades (Debug)</h2>
+                <p>Upgrade system loaded: <span id="upgradeStatus">Loading...</span></p>
+            </section>
+
+            <section id="inventoryTab" class="game-tab">
+                <h2>Inventory (Debug)</h2>
+                <p>Inventory system loaded: <span id="inventoryStatus">Loading...</span></p>
+            </section>
+
+            <section id="achievementsTab" class="game-tab">
+                <h2>Achievements (Debug)</h2>
+                <p>Achievement system loaded: <span id="achievementStatus">Loading...</span></p>
+            </section>
+
+            <section id="bossesTab" class="game-tab">
+                <h2>Bosses (Debug)</h2>
+                <p>Boss system loaded: <span id="bossStatus">Loading...</span></p>
+            </section>
+
+            <section id="minigamesTab" class="game-tab">
+                <h2>Minigames (Debug)</h2>
+                <p>Minigame system loaded: <span id="minigameStatus">Loading...</span></p>
+            </section>
+
+            <section id="leaderboardTab" class="game-tab">
+                <h2>Leaderboard (Debug)</h2>
+                <p>Leaderboard system loaded: <span id="leaderboardStatus">Loading...</span></p>
+            </section>
+
+            <section id="settingsTab" class="game-tab">
+                <h2>Settings (Debug)</h2>
+                <p>Settings loaded</p>
+                <button onclick="testClick()">Test Click</button>
+                <button onclick="testNotification()">Test Notification</button>
+                <button onclick="testModal()">Test Modal</button>
+            </section>
+        </main>
+
+        <!-- Notifications -->
+        <div class="notifications" id="notifications"></div>
+
+        <!-- Modals -->
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal" id="modal">
+                <div class="modal-header">
+                    <h3 id="modalTitle">Modal Title</h3>
+                    <button class="modal-close" id="modalClose">&times;</button>
+                </div>
+                <div class="modal-content" id="modalContent">
+                    <!-- Modal content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/core/game.js"></script>
+    <script src="js/core/save.js"></script>
+    <script src="js/core/audio.js"></script>
+    <script src="js/systems/particles.js"></script>
+    <script src="js/systems/clicking.js"></script>
+    <script src="js/systems/shop.js"></script>
+    <script src="js/systems/upgrades.js"></script>
+    <script src="js/systems/inventory.js"></script>
+    <script src="js/systems/achievements.js"></script>
+    <script src="js/systems/bosses.js"></script>
+    <script src="js/systems/minigames.js"></script>
+    <script src="js/systems/placeholder-systems.js"></script>
+    <script src="js/systems/utility-systems.js"></script>
+    <script src="js/ui/modals.js"></script>
+    <script src="js/ui/notifications.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // Debug functions
+        function logDebug(message, type = 'info') {
+            const log = document.getElementById('debugLog');
+            const entry = document.createElement('div');
+            entry.className = `debug-entry debug-${type}`;
+            entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            log.appendChild(entry);
+            log.scrollTop = log.scrollHeight;
+        }
+
+        function updateStatus(system, status) {
+            const element = document.getElementById(system + 'Status');
+            if (element) {
+                element.textContent = status;
+                element.style.color = status === 'Loaded' ? '#51cf66' : '#ff6b6b';
+            }
+        }
+
+        function testClick() {
+            if (window.game && window.game.systems.clicking) {
+                window.game.systems.clicking.handleClick(100, 100, 'debug');
+                logDebug('Test click executed', 'success');
+            } else {
+                logDebug('Click system not available', 'error');
+            }
+        }
+
+        function testNotification() {
+            if (window.game && window.game.systems.notifications) {
+                window.game.systems.notifications.show('Test notification!', 'success');
+                logDebug('Test notification sent', 'success');
+            } else {
+                logDebug('Notification system not available', 'error');
+            }
+        }
+
+        function testModal() {
+            if (window.game && window.game.systems.modals) {
+                window.game.systems.modals.showAlert('This is a test modal!');
+                logDebug('Test modal opened', 'success');
+            } else {
+                logDebug('Modal system not available', 'error');
+            }
+        }
+
+        // Override console methods to capture logs
+        const originalLog = console.log;
+        const originalError = console.error;
+        const originalWarn = console.warn;
+
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            logDebug(args.join(' '), 'info');
+        };
+
+        console.error = function(...args) {
+            originalError.apply(console, args);
+            logDebug(args.join(' '), 'error');
+        };
+
+        console.warn = function(...args) {
+            originalWarn.apply(console, args);
+            logDebug(args.join(' '), 'warning');
+        };
+
+        // Monitor game initialization
+        window.addEventListener('load', () => {
+            logDebug('Page loaded, waiting for game initialization...', 'info');
+            
+            // Check for game initialization
+            const checkGame = setInterval(() => {
+                if (window.game && window.game.isInitialized) {
+                    clearInterval(checkGame);
+                    logDebug('Game initialized successfully!', 'success');
+                    document.getElementById('debugStatus').textContent = 'Game Ready';
+                    document.getElementById('debugStatus').style.color = '#51cf66';
+                    
+                    // Update system statuses
+                    updateStatus('shop', 'Loaded');
+                    updateStatus('upgrade', 'Loaded');
+                    updateStatus('inventory', 'Loaded');
+                    updateStatus('achievement', 'Loaded');
+                    updateStatus('boss', 'Loaded');
+                    updateStatus('minigame', 'Loaded');
+                    updateStatus('leaderboard', 'Loaded');
+                }
+            }, 100);
+        });
+    </script>
+</body>
+</html>

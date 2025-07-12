@@ -1,0 +1,414 @@
+{
+  "minigames": {
+    "flappy_clicker": {
+      "name": "Flappy Clicker",
+      "description": "Click to make the bird fly through pipes",
+      "icon": "🦅",
+      "difficulties": {
+        "easy": {
+          "pipe_gap": 150,
+          "pipe_speed": 2,
+          "pipe_spacing": 200,
+          "reward_multiplier": 1
+        },
+        "medium": {
+          "pipe_gap": 120,
+          "pipe_speed": 3,
+          "pipe_spacing": 180,
+          "reward_multiplier": 2
+        },
+        "hard": {
+          "pipe_gap": 100,
+          "pipe_speed": 4,
+          "pipe_spacing": 160,
+          "reward_multiplier": 3
+        },
+        "extreme": {
+          "pipe_gap": 80,
+          "pipe_speed": 5,
+          "pipe_spacing": 140,
+          "reward_multiplier": 5
+        }
+      },
+      "rewards": {
+        "coins": 100,
+        "xp": 50,
+        "diamonds": 1
+      }
+    },
+    "memory_match": {
+      "name": "Memory Match",
+      "description": "Find matching pairs of cards",
+      "icon": "🧠",
+      "difficulties": {
+        "easy": {
+          "grid_size": 4,
+          "time_limit": 120,
+          "reward_multiplier": 1
+        },
+        "medium": {
+          "grid_size": 6,
+          "time_limit": 90,
+          "reward_multiplier": 2
+        },
+        "hard": {
+          "grid_size": 8,
+          "time_limit": 60,
+          "reward_multiplier": 3
+        },
+        "extreme": {
+          "grid_size": 10,
+          "time_limit": 45,
+          "reward_multiplier": 5
+        }
+      },
+      "rewards": {
+        "coins": 150,
+        "xp": 75,
+        "diamonds": 2
+      }
+    },
+    "reaction_timer": {
+      "name": "Reaction Timer",
+      "description": "Click as fast as possible when the color changes",
+      "icon": "⚡",
+      "difficulties": {
+        "easy": {
+          "min_delay": 1000,
+          "max_delay": 3000,
+          "target_time": 500,
+          "reward_multiplier": 1
+        },
+        "medium": {
+          "min_delay": 800,
+          "max_delay": 2500,
+          "target_time": 400,
+          "reward_multiplier": 2
+        },
+        "hard": {
+          "min_delay": 600,
+          "max_delay": 2000,
+          "target_time": 300,
+          "reward_multiplier": 3
+        },
+        "extreme": {
+          "min_delay": 400,
+          "max_delay": 1500,
+          "target_time": 200,
+          "reward_multiplier": 5
+        }
+      },
+      "rewards": {
+        "coins": 200,
+        "xp": 100,
+        "diamonds": 3
+      }
+    },
+    "math_quiz": {
+      "name": "Math Quiz",
+      "description": "Solve math problems quickly",
+      "icon": "🔢",
+      "difficulties": {
+        "easy": {
+          "operations": ["+", "-"],
+          "max_number": 20,
+          "time_limit": 30,
+          "questions": 10,
+          "reward_multiplier": 1
+        },
+        "medium": {
+          "operations": ["+", "-", "*"],
+          "max_number": 50,
+          "time_limit": 25,
+          "questions": 15,
+          "reward_multiplier": 2
+        },
+        "hard": {
+          "operations": ["+", "-", "*", "/"],
+          "max_number": 100,
+          "time_limit": 20,
+          "questions": 20,
+          "reward_multiplier": 3
+        },
+        "extreme": {
+          "operations": ["+", "-", "*", "/", "^"],
+          "max_number": 200,
+          "time_limit": 15,
+          "questions": 25,
+          "reward_multiplier": 5
+        }
+      },
+      "rewards": {
+        "coins": 250,
+        "xp": 125,
+        "diamonds": 4
+      }
+    },
+    "dungeon_crawler": {
+      "name": "Dungeon Crawler",
+      "description": "Navigate through a dangerous dungeon",
+      "icon": "🏰",
+      "difficulties": {
+        "easy": {
+          "dungeon_size": 10,
+          "enemies": 5,
+          "traps": 3,
+          "treasures": 8,
+          "reward_multiplier": 1
+        },
+        "medium": {
+          "dungeon_size": 15,
+          "enemies": 10,
+          "traps": 7,
+          "treasures": 12,
+          "reward_multiplier": 2
+        },
+        "hard": {
+          "dungeon_size": 20,
+          "enemies": 15,
+          "traps": 12,
+          "treasures": 16,
+          "reward_multiplier": 3
+        },
+        "extreme": {
+          "dungeon_size": 25,
+          "enemies": 20,
+          "traps": 18,
+          "treasures": 20,
+          "reward_multiplier": 5
+        }
+      },
+      "rewards": {
+        "coins": 300,
+        "xp": 150,
+        "diamonds": 5
+      }
+    },
+    "color_matching": {
+      "name": "Color Matching",
+      "description": "Match falling blocks by color",
+      "icon": "🎨",
+      "difficulties": {
+        "easy": {
+          "colors": 3,
+          "fall_speed": 1,
+          "time_limit": 60,
+          "reward_multiplier": 1
+        },
+        "medium": {
+          "colors": 4,
+          "fall_speed": 1.5,
+          "time_limit": 45,
+          "reward_multiplier": 2
+        },
+        "hard": {
+          "colors": 5,
+          "fall_speed": 2,
+          "time_limit": 30,
+          "reward_multiplier": 3
+        },
+        "extreme": {
+          "colors": 6,
+          "fall_speed": 3,
+          "time_limit": 20,
+          "reward_multiplier": 5
+        }
+      },
+      "rewards": {
+        "coins": 175,
+        "xp": 87,
+        "diamonds": 2
+      }
+    },
+    "word_scramble": {
+      "name": "Word Scramble",
+      "description": "Unscramble words before time runs out",
+      "icon": "📝",
+      "difficulties": {
+        "easy": {
+          "word_length": 4,
+          "time_limit": 30,
+          "words": 10,
+          "reward_multiplier": 1
+        },
+        "medium": {
+          "word_length": 5,
+          "time_limit": 25,
+          "words": 15,
+          "reward_multiplier": 2
+        },
+        "hard": {
+          "word_length": 6,
+          "time_limit": 20,
+          "words": 20,
+          "reward_multiplier": 3
+        },
+        "extreme": {
+          "word_length": 7,
+          "time_limit": 15,
+          "words": 25,
+          "reward_multiplier": 5
+        }
+      },
+      "rewards": {
+        "coins": 225,
+        "xp": 112,
+        "diamonds": 3
+      }
+    },
+    "pattern_matching": {
+      "name": "Pattern Matching",
+      "description": "Remember and repeat patterns",
+      "icon": "🔮",
+      "difficulties": {
+        "easy": {
+          "pattern_length": 4,
+          "display_time": 1000,
+          "rounds": 5,
+          "reward_multiplier": 1
+        },
+        "medium": {
+          "pattern_length": 6,
+          "display_time": 800,
+          "rounds": 7,
+          "reward_multiplier": 2
+        },
+        "hard": {
+          "pattern_length": 8,
+          "display_time": 600,
+          "rounds": 10,
+          "reward_multiplier": 3
+        },
+        "extreme": {
+          "pattern_length": 10,
+          "display_time": 400,
+          "rounds": 12,
+          "reward_multiplier": 5
+        }
+      },
+      "rewards": {
+        "coins": 275,
+        "xp": 137,
+        "diamonds": 4
+      }
+    },
+    "speed_typing": {
+      "name": "Speed Typing",
+      "description": "Type words as fast as possible",
+      "icon": "⌨️",
+      "difficulties": {
+        "easy": {
+          "word_count": 10,
+          "time_limit": 60,
+          "min_word_length": 3,
+          "reward_multiplier": 1
+        },
+        "medium": {
+          "word_count": 15,
+          "time_limit": 45,
+          "min_word_length": 4,
+          "reward_multiplier": 2
+        },
+        "hard": {
+          "word_count": 20,
+          "time_limit": 30,
+          "min_word_length": 5,
+          "reward_multiplier": 3
+        },
+        "extreme": {
+          "word_count": 25,
+          "time_limit": 20,
+          "min_word_length": 6,
+          "reward_multiplier": 5
+        }
+      },
+      "rewards": {
+        "coins": 325,
+        "xp": 162,
+        "diamonds": 5
+      }
+    },
+    "puzzle_slider": {
+      "name": "Puzzle Slider",
+      "description": "Arrange tiles in the correct order",
+      "icon": "🧩",
+      "difficulties": {
+        "easy": {
+          "grid_size": 3,
+          "time_limit": 120,
+          "reward_multiplier": 1
+        },
+        "medium": {
+          "grid_size": 4,
+          "time_limit": 90,
+          "reward_multiplier": 2
+        },
+        "hard": {
+          "grid_size": 5,
+          "time_limit": 60,
+          "reward_multiplier": 3
+        },
+        "extreme": {
+          "grid_size": 6,
+          "time_limit": 45,
+          "reward_multiplier": 5
+        }
+      },
+      "rewards": {
+        "coins": 350,
+        "xp": 175,
+        "diamonds": 6
+      }
+    }
+  },
+  "minigame_categories": {
+    "action": ["flappy_clicker", "reaction_timer", "color_matching"],
+    "puzzle": ["memory_match", "math_quiz", "pattern_matching", "puzzle_slider"],
+    "adventure": ["dungeon_crawler"],
+    "skill": ["word_scramble", "speed_typing"]
+  },
+  "minigame_unlocks": {
+    "flappy_clicker": {"level": 1},
+    "memory_match": {"level": 5},
+    "reaction_timer": {"level": 10},
+    "math_quiz": {"level": 15},
+    "dungeon_crawler": {"level": 20},
+    "color_matching": {"level": 25},
+    "word_scramble": {"level": 30},
+    "pattern_matching": {"level": 35},
+    "speed_typing": {"level": 40},
+    "puzzle_slider": {"level": 45}
+  },
+  "minigame_achievements": {
+    "flappy_master": {
+      "name": "Flappy Master",
+      "description": "Score 100 points in Flappy Clicker",
+      "requirement": {"game": "flappy_clicker", "score": 100},
+      "reward": {"coins": 500, "xp": 250}
+    },
+    "memory_master": {
+      "name": "Memory Master",
+      "description": "Complete Memory Match in under 30 seconds",
+      "requirement": {"game": "memory_match", "time": 30},
+      "reward": {"coins": 500, "xp": 250}
+    },
+    "speed_demon": {
+      "name": "Speed Demon",
+      "description": "React in under 200ms",
+      "requirement": {"game": "reaction_timer", "time": 200},
+      "reward": {"coins": 500, "xp": 250}
+    },
+    "math_genius": {
+      "name": "Math Genius",
+      "description": "Get 100% on Math Quiz",
+      "requirement": {"game": "math_quiz", "accuracy": 100},
+      "reward": {"coins": 500, "xp": 250}
+    },
+    "dungeon_explorer": {
+      "name": "Dungeon Explorer",
+      "description": "Complete Dungeon Crawler without taking damage",
+      "requirement": {"game": "dungeon_crawler", "damage": 0},
+      "reward": {"coins": 500, "xp": 250}
+    }
+  }
+}

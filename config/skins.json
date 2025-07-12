@@ -1,0 +1,363 @@
+{
+  "skins": {
+    "common": [
+      {
+        "id": "baby_dragon",
+        "name": "Baby Dragon",
+        "emoji": "🐉",
+        "rarity": "common",
+        "price": 100,
+        "clickPower": 1,
+        "description": "A cute little dragon just learning to breathe fire",
+        "effects": ["fire_particles"],
+        "sound": "dragon_roar.mp3",
+        "unlocked": true
+      },
+      {
+        "id": "slime",
+        "name": "Slime",
+        "emoji": "🟢",
+        "rarity": "common",
+        "price": 50,
+        "clickPower": 1,
+        "description": "A bouncy green slime creature",
+        "effects": ["bounce_effect"],
+        "sound": "slime_squish.mp3"
+      },
+      {
+        "id": "rock_golem",
+        "name": "Rock Golem",
+        "emoji": "🗿",
+        "rarity": "common",
+        "price": 75,
+        "clickPower": 1,
+        "description": "A sturdy stone guardian",
+        "effects": ["rock_particles"],
+        "sound": "stone_crack.mp3"
+      },
+      {
+        "id": "forest_sprite",
+        "name": "Forest Sprite",
+        "emoji": "🌿",
+        "rarity": "common",
+        "price": 60,
+        "clickPower": 1,
+        "description": "A magical nature spirit",
+        "effects": ["leaf_particles"],
+        "sound": "wind_chime.mp3"
+      },
+      {
+        "id": "crystal_shard",
+        "name": "Crystal Shard",
+        "emoji": "💎",
+        "rarity": "common",
+        "price": 80,
+        "clickPower": 1,
+        "description": "A sparkling crystal formation",
+        "effects": ["sparkle_particles"],
+        "sound": "crystal_tinkle.mp3"
+      }
+    ],
+    "rare": [
+      {
+        "id": "phoenix",
+        "name": "Phoenix",
+        "emoji": "🔥",
+        "rarity": "rare",
+        "price": 500,
+        "clickPower": 3,
+        "description": "A majestic fire bird that rises from ashes",
+        "effects": ["fire_trail", "rebirth_effect"],
+        "sound": "phoenix_cry.mp3"
+      },
+      {
+        "id": "ice_queen",
+        "name": "Ice Queen",
+        "emoji": "❄️",
+        "rarity": "rare",
+        "price": 450,
+        "clickPower": 3,
+        "description": "A regal ice monarch with freezing powers",
+        "effects": ["ice_particles", "frost_effect"],
+        "sound": "ice_crack.mp3"
+      },
+      {
+        "id": "thunder_bird",
+        "name": "Thunder Bird",
+        "emoji": "⚡",
+        "rarity": "rare",
+        "price": 400,
+        "clickPower": 3,
+        "description": "A lightning-fast avian creature",
+        "effects": ["lightning_effect", "thunder_sound"],
+        "sound": "thunder_clap.mp3"
+      },
+      {
+        "id": "shadow_wolf",
+        "name": "Shadow Wolf",
+        "emoji": "🐺",
+        "rarity": "rare",
+        "price": 350,
+        "clickPower": 3,
+        "description": "A mysterious wolf from the shadows",
+        "effects": ["shadow_trail", "howl_effect"],
+        "sound": "wolf_howl.mp3"
+      },
+      {
+        "id": "golden_knight",
+        "name": "Golden Knight",
+        "emoji": "⚔️",
+        "rarity": "rare",
+        "price": 600,
+        "clickPower": 3,
+        "description": "A noble warrior in shining armor",
+        "effects": ["golden_sparkles", "sword_slash"],
+        "sound": "metal_clang.mp3"
+      }
+    ],
+    "epic": [
+      {
+        "id": "cosmic_dragon",
+        "name": "Cosmic Dragon",
+        "emoji": "🌌",
+        "rarity": "epic",
+        "price": 2000,
+        "clickPower": 8,
+        "description": "A dragon born from the stars themselves",
+        "effects": ["cosmic_particles", "galaxy_trail", "star_burst"],
+        "sound": "cosmic_roar.mp3"
+      },
+      {
+        "id": "time_wizard",
+        "name": "Time Wizard",
+        "emoji": "⏰",
+        "rarity": "epic",
+        "price": 1800,
+        "clickPower": 8,
+        "description": "A master of time and space",
+        "effects": ["time_warp", "clock_particles", "temporal_shift"],
+        "sound": "time_chime.mp3"
+      },
+      {
+        "id": "void_creature",
+        "name": "Void Creature",
+        "emoji": "🕳️",
+        "rarity": "epic",
+        "price": 2200,
+        "clickPower": 8,
+        "description": "A being from the depths of nothingness",
+        "effects": ["void_pull", "darkness_aura", "reality_bend"],
+        "sound": "void_whisper.mp3"
+      },
+      {
+        "id": "elemental_lord",
+        "name": "Elemental Lord",
+        "emoji": "🌪️",
+        "rarity": "epic",
+        "price": 2500,
+        "clickPower": 8,
+        "description": "Master of all four elements",
+        "effects": ["elemental_cycle", "nature_wrath", "elemental_burst"],
+        "sound": "elemental_roar.mp3"
+      },
+      {
+        "id": "crystal_queen",
+        "name": "Crystal Queen",
+        "emoji": "👑",
+        "rarity": "epic",
+        "price": 3000,
+        "clickPower": 8,
+        "description": "Ruler of the crystal realm",
+        "effects": ["crystal_rain", "royal_aura", "gem_explosion"],
+        "sound": "crystal_song.mp3"
+      }
+    ],
+    "legendary": [
+      {
+        "id": "ancient_god",
+        "name": "Ancient God",
+        "emoji": "👹",
+        "rarity": "legendary",
+        "price": 10000,
+        "clickPower": 25,
+        "description": "A primordial deity from the dawn of time",
+        "effects": ["divine_light", "reality_shift", "godly_presence", "cosmic_storm"],
+        "sound": "divine_thunder.mp3"
+      },
+      {
+        "id": "infinity_being",
+        "name": "Infinity Being",
+        "emoji": "♾️",
+        "rarity": "legendary",
+        "price": 15000,
+        "clickPower": 25,
+        "description": "A being that exists beyond all dimensions",
+        "effects": ["infinity_loop", "dimension_tear", "eternal_echo", "void_creation"],
+        "sound": "infinity_whisper.mp3"
+      },
+      {
+        "id": "chaos_lord",
+        "name": "Chaos Lord",
+        "emoji": "🌀",
+        "rarity": "legendary",
+        "price": 12000,
+        "clickPower": 25,
+        "description": "Master of pure chaos and disorder",
+        "effects": ["chaos_explosion", "reality_chaos", "random_effects", "chaos_storm"],
+        "sound": "chaos_roar.mp3"
+      },
+      {
+        "id": "eternal_phoenix",
+        "name": "Eternal Phoenix",
+        "emoji": "🦅",
+        "rarity": "legendary",
+        "price": 20000,
+        "clickPower": 25,
+        "description": "The immortal bird of legend",
+        "effects": ["eternal_flame", "immortality_aura", "rebirth_cycle", "legendary_presence"],
+        "sound": "eternal_song.mp3"
+      },
+      {
+        "id": "dream_weaver",
+        "name": "Dream Weaver",
+        "emoji": "💭",
+        "rarity": "legendary",
+        "price": 18000,
+        "clickPower": 25,
+        "description": "Weaver of dreams and nightmares",
+        "effects": ["dream_reality", "nightmare_shift", "illusion_mastery", "dream_storm"],
+        "sound": "dream_whisper.mp3"
+      }
+    ],
+    "rainbow": [
+      {
+        "id": "rainbow_unicorn",
+        "name": "Rainbow Unicorn",
+        "emoji": "🦄",
+        "rarity": "rainbow",
+        "price": 50000,
+        "clickPower": 50,
+        "description": "A magical unicorn with rainbow powers",
+        "effects": ["rainbow_trail", "magic_sparkles", "wish_granting", "color_shift"],
+        "sound": "unicorn_neigh.mp3"
+      },
+      {
+        "id": "prism_dragon",
+        "name": "Prism Dragon",
+        "emoji": "🌈",
+        "rarity": "rainbow",
+        "price": 75000,
+        "clickPower": 50,
+        "description": "A dragon that refracts light into beautiful colors",
+        "effects": ["prism_effect", "color_burst", "light_refraction", "spectrum_aura"],
+        "sound": "prism_song.mp3"
+      }
+    ],
+    "event": [
+      {
+        "id": "halloween_ghost",
+        "name": "Halloween Ghost",
+        "emoji": "👻",
+        "rarity": "event",
+        "price": 1000,
+        "clickPower": 5,
+        "description": "A spooky ghost for Halloween",
+        "effects": ["ghost_wail", "spooky_aura", "fog_effect"],
+        "sound": "ghost_howl.mp3",
+        "event": "halloween"
+      },
+      {
+        "id": "christmas_reindeer",
+        "name": "Christmas Reindeer",
+        "emoji": "🦌",
+        "rarity": "event",
+        "price": 1000,
+        "clickPower": 5,
+        "description": "Santa's favorite reindeer",
+        "effects": ["snow_trail", "jingle_bells", "christmas_magic"],
+        "sound": "reindeer_bell.mp3",
+        "event": "christmas"
+      },
+      {
+        "id": "easter_bunny",
+        "name": "Easter Bunny",
+        "emoji": "🐰",
+        "rarity": "event",
+        "price": 1000,
+        "clickPower": 5,
+        "description": "A magical Easter bunny",
+        "effects": ["egg_laying", "spring_flowers", "bunny_hop"],
+        "sound": "bunny_squeak.mp3",
+        "event": "easter"
+      }
+    ],
+    "godly": [
+      {
+        "id": "supreme_creator",
+        "name": "Supreme Creator",
+        "emoji": "🌟",
+        "rarity": "godly",
+        "price": 100000,
+        "clickPower": 100,
+        "description": "The ultimate being of creation",
+        "effects": ["creation_power", "reality_control", "divine_authority", "cosmic_creation"],
+        "sound": "creation_song.mp3"
+      },
+      {
+        "id": "eternal_destroyer",
+        "name": "Eternal Destroyer",
+        "emoji": "💥",
+        "rarity": "godly",
+        "price": 150000,
+        "clickPower": 100,
+        "description": "The force that ends all things",
+        "effects": ["destruction_wave", "void_creation", "reality_end", "cosmic_destruction"],
+        "sound": "destruction_roar.mp3"
+      }
+    ],
+    "expensive": [
+      {
+        "id": "millionaire_dragon",
+        "name": "Millionaire Dragon",
+        "emoji": "💰",
+        "rarity": "expensive",
+        "price": 1000000,
+        "clickPower": 500,
+        "description": "A dragon made of pure gold and diamonds",
+        "effects": ["money_rain", "golden_aura", "diamond_sparkles", "wealth_power"],
+        "sound": "money_chime.mp3"
+      },
+      {
+        "id": "billionaire_phoenix",
+        "name": "Billionaire Phoenix",
+        "emoji": "💎",
+        "rarity": "expensive",
+        "price": 10000000,
+        "clickPower": 1000,
+        "description": "The most expensive creature in existence",
+        "effects": ["diamond_storm", "luxury_aura", "prestige_effect", "billionaire_power"],
+        "sound": "luxury_song.mp3"
+      }
+    ]
+  },
+  "rarity_colors": {
+    "common": "#6b7280",
+    "rare": "#3b82f6",
+    "epic": "#8b5cf6",
+    "legendary": "#f59e0b",
+    "rainbow": "#ec4899",
+    "event": "#10b981",
+    "godly": "#ef4444",
+    "expensive": "#fbbf24"
+  },
+  "rarity_multipliers": {
+    "common": 1,
+    "rare": 2,
+    "epic": 3,
+    "legendary": 5,
+    "rainbow": 8,
+    "event": 2,
+    "godly": 10,
+    "expensive": 15
+  }
+}

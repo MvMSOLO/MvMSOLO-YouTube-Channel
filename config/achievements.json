@@ -1,0 +1,433 @@
+{
+  "achievements": {
+    "clicking": [
+      {
+        "id": "first_click",
+        "name": "First Click",
+        "description": "Click for the first time",
+        "icon": "👆",
+        "requirement": {"type": "clicks", "value": 1},
+        "reward": {"coins": 10, "xp": 5},
+        "rarity": "common"
+      },
+      {
+        "id": "click_100",
+        "name": "Century Clicker",
+        "description": "Click 100 times",
+        "icon": "💯",
+        "requirement": {"type": "clicks", "value": 100},
+        "reward": {"coins": 50, "xp": 25},
+        "rarity": "common"
+      },
+      {
+        "id": "click_1000",
+        "name": "Millennium Clicker",
+        "description": "Click 1,000 times",
+        "icon": "🎯",
+        "requirement": {"type": "clicks", "value": 1000},
+        "reward": {"coins": 200, "xp": 100},
+        "rarity": "common"
+      },
+      {
+        "id": "click_10000",
+        "name": "Ten Thousand Clicks",
+        "description": "Click 10,000 times",
+        "icon": "🔥",
+        "requirement": {"type": "clicks", "value": 10000},
+        "reward": {"coins": 1000, "xp": 500},
+        "rarity": "rare"
+      },
+      {
+        "id": "click_100000",
+        "name": "Hundred Thousand Clicks",
+        "description": "Click 100,000 times",
+        "icon": "⚡",
+        "requirement": {"type": "clicks", "value": 100000},
+        "reward": {"coins": 5000, "xp": 2500},
+        "rarity": "epic"
+      },
+      {
+        "id": "click_1000000",
+        "name": "Million Clicks",
+        "description": "Click 1,000,000 times",
+        "icon": "💎",
+        "requirement": {"type": "clicks", "value": 1000000},
+        "reward": {"coins": 25000, "xp": 10000},
+        "rarity": "legendary"
+      },
+      {
+        "id": "click_10000000",
+        "name": "Ten Million Clicks",
+        "description": "Click 10,000,000 times",
+        "icon": "👑",
+        "requirement": {"type": "clicks", "value": 10000000},
+        "reward": {"coins": 100000, "xp": 50000},
+        "rarity": "godly"
+      }
+    ],
+    "coins": [
+      {
+        "id": "first_coin",
+        "name": "First Coin",
+        "description": "Earn your first coin",
+        "icon": "🪙",
+        "requirement": {"type": "coins", "value": 1},
+        "reward": {"coins": 5, "xp": 10},
+        "rarity": "common"
+      },
+      {
+        "id": "coin_collector",
+        "name": "Coin Collector",
+        "description": "Earn 1,000 coins",
+        "icon": "💰",
+        "requirement": {"type": "coins", "value": 1000},
+        "reward": {"coins": 100, "xp": 50},
+        "rarity": "common"
+      },
+      {
+        "id": "coin_hoarder",
+        "name": "Coin Hoarder",
+        "description": "Earn 100,000 coins",
+        "icon": "🏦",
+        "requirement": {"type": "coins", "value": 100000},
+        "reward": {"coins": 1000, "xp": 500},
+        "rarity": "rare"
+      },
+      {
+        "id": "coin_millionaire",
+        "name": "Coin Millionaire",
+        "description": "Earn 1,000,000 coins",
+        "icon": "💎",
+        "requirement": {"type": "coins", "value": 1000000},
+        "reward": {"coins": 10000, "xp": 5000},
+        "rarity": "epic"
+      },
+      {
+        "id": "coin_billionaire",
+        "name": "Coin Billionaire",
+        "description": "Earn 1,000,000,000 coins",
+        "icon": "👑",
+        "requirement": {"type": "coins", "value": 1000000000},
+        "reward": {"coins": 100000, "xp": 50000},
+        "rarity": "legendary"
+      }
+    ],
+    "diamonds": [
+      {
+        "id": "first_diamond",
+        "name": "First Diamond",
+        "description": "Earn your first diamond",
+        "icon": "💎",
+        "requirement": {"type": "diamonds", "value": 1},
+        "reward": {"diamonds": 5, "xp": 25},
+        "rarity": "rare"
+      },
+      {
+        "id": "diamond_collector",
+        "name": "Diamond Collector",
+        "description": "Earn 100 diamonds",
+        "icon": "💎💎",
+        "requirement": {"type": "diamonds", "value": 100},
+        "reward": {"diamonds": 25, "xp": 100},
+        "rarity": "epic"
+      },
+      {
+        "id": "diamond_hoarder",
+        "name": "Diamond Hoarder",
+        "description": "Earn 1,000 diamonds",
+        "icon": "💎💎💎",
+        "requirement": {"type": "diamonds", "value": 1000},
+        "reward": {"diamonds": 100, "xp": 500},
+        "rarity": "legendary"
+      }
+    ],
+    "level": [
+      {
+        "id": "level_10",
+        "name": "Level 10",
+        "description": "Reach level 10",
+        "icon": "🔟",
+        "requirement": {"type": "level", "value": 10},
+        "reward": {"coins": 500, "xp": 100},
+        "rarity": "common"
+      },
+      {
+        "id": "level_50",
+        "name": "Level 50",
+        "description": "Reach level 50",
+        "icon": "5️⃣0️⃣",
+        "requirement": {"type": "level", "value": 50},
+        "reward": {"coins": 2000, "xp": 500},
+        "rarity": "rare"
+      },
+      {
+        "id": "level_100",
+        "name": "Level 100",
+        "description": "Reach level 100",
+        "icon": "💯",
+        "requirement": {"type": "level", "value": 100},
+        "reward": {"coins": 10000, "xp": 2000},
+        "rarity": "epic"
+      },
+      {
+        "id": "level_500",
+        "name": "Level 500",
+        "description": "Reach level 500",
+        "icon": "5️⃣0️⃣0️⃣",
+        "requirement": {"type": "level", "value": 500},
+        "reward": {"coins": 50000, "xp": 10000},
+        "rarity": "legendary"
+      },
+      {
+        "id": "level_1000",
+        "name": "Level 1000",
+        "description": "Reach level 1000",
+        "icon": "👑",
+        "requirement": {"type": "level", "value": 1000},
+        "reward": {"coins": 100000, "xp": 50000},
+        "rarity": "godly"
+      }
+    ],
+    "skins": [
+      {
+        "id": "first_skin",
+        "name": "Skin Collector",
+        "description": "Unlock your first skin",
+        "icon": "🎨",
+        "requirement": {"type": "skins", "value": 1},
+        "reward": {"coins": 100, "xp": 50},
+        "rarity": "common"
+      },
+      {
+        "id": "skin_hoarder",
+        "name": "Skin Hoarder",
+        "description": "Unlock 10 skins",
+        "icon": "🎨🎨",
+        "requirement": {"type": "skins", "value": 10},
+        "reward": {"coins": 500, "xp": 250},
+        "rarity": "rare"
+      },
+      {
+        "id": "skin_master",
+        "name": "Skin Master",
+        "description": "Unlock 50 skins",
+        "icon": "🎨🎨🎨",
+        "requirement": {"type": "skins", "value": 50},
+        "reward": {"coins": 2000, "xp": 1000},
+        "rarity": "epic"
+      },
+      {
+        "id": "skin_legend",
+        "name": "Skin Legend",
+        "description": "Unlock 100 skins",
+        "icon": "👑",
+        "requirement": {"type": "skins", "value": 100},
+        "reward": {"coins": 10000, "xp": 5000},
+        "rarity": "legendary"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "first_upgrade",
+        "name": "First Upgrade",
+        "description": "Purchase your first upgrade",
+        "icon": "⚡",
+        "requirement": {"type": "upgrades", "value": 1},
+        "reward": {"coins": 50, "xp": 25},
+        "rarity": "common"
+      },
+      {
+        "id": "upgrade_master",
+        "name": "Upgrade Master",
+        "description": "Purchase 25 upgrades",
+        "icon": "⚡⚡",
+        "requirement": {"type": "upgrades", "value": 25},
+        "reward": {"coins": 500, "xp": 250},
+        "rarity": "rare"
+      },
+      {
+        "id": "upgrade_legend",
+        "name": "Upgrade Legend",
+        "description": "Purchase 100 upgrades",
+        "icon": "⚡⚡⚡",
+        "requirement": {"type": "upgrades", "value": 100},
+        "reward": {"coins": 2000, "xp": 1000},
+        "rarity": "epic"
+      }
+    ],
+    "autoclickers": [
+      {
+        "id": "first_autoclicker",
+        "name": "Automation",
+        "description": "Purchase your first auto clicker",
+        "icon": "🤖",
+        "requirement": {"type": "autoclickers", "value": 1},
+        "reward": {"coins": 100, "xp": 50},
+        "rarity": "common"
+      },
+      {
+        "id": "autoclicker_master",
+        "name": "Automation Master",
+        "description": "Purchase 10 auto clickers",
+        "icon": "🤖🤖",
+        "requirement": {"type": "autoclickers", "value": 10},
+        "reward": {"coins": 1000, "xp": 500},
+        "rarity": "rare"
+      }
+    ],
+    "bosses": [
+      {
+        "id": "first_boss",
+        "name": "Boss Slayer",
+        "description": "Defeat your first boss",
+        "icon": "👹",
+        "requirement": {"type": "bosses_defeated", "value": 1},
+        "reward": {"coins": 500, "xp": 250},
+        "rarity": "rare"
+      },
+      {
+        "id": "boss_master",
+        "name": "Boss Master",
+        "description": "Defeat 10 bosses",
+        "icon": "👹👹",
+        "requirement": {"type": "bosses_defeated", "value": 10},
+        "reward": {"coins": 2000, "xp": 1000},
+        "rarity": "epic"
+      },
+      {
+        "id": "boss_legend",
+        "name": "Boss Legend",
+        "description": "Defeat 50 bosses",
+        "icon": "👑",
+        "requirement": {"type": "bosses_defeated", "value": 50},
+        "reward": {"coins": 10000, "xp": 5000},
+        "rarity": "legendary"
+      }
+    ],
+    "minigames": [
+      {
+        "id": "first_minigame",
+        "name": "Game Player",
+        "description": "Play your first minigame",
+        "icon": "🎮",
+        "requirement": {"type": "minigames_played", "value": 1},
+        "reward": {"coins": 100, "xp": 50},
+        "rarity": "common"
+      },
+      {
+        "id": "minigame_master",
+        "name": "Minigame Master",
+        "description": "Play 50 minigames",
+        "icon": "🎮🎮",
+        "requirement": {"type": "minigames_played", "value": 50},
+        "reward": {"coins": 1000, "xp": 500},
+        "rarity": "rare"
+      }
+    ],
+    "prestige": [
+      {
+        "id": "first_prestige",
+        "name": "First Prestige",
+        "description": "Complete your first prestige",
+        "icon": "🌟",
+        "requirement": {"type": "prestige_count", "value": 1},
+        "reward": {"coins": 1000, "xp": 500},
+        "rarity": "epic"
+      },
+      {
+        "id": "prestige_master",
+        "name": "Prestige Master",
+        "description": "Complete 10 prestiges",
+        "icon": "🌟🌟",
+        "requirement": {"type": "prestige_count", "value": 10},
+        "reward": {"coins": 5000, "xp": 2500},
+        "rarity": "legendary"
+      },
+      {
+        "id": "prestige_legend",
+        "name": "Prestige Legend",
+        "description": "Complete 100 prestiges",
+        "icon": "👑",
+        "requirement": {"type": "prestige_count", "value": 100},
+        "reward": {"coins": 25000, "xp": 10000},
+        "rarity": "godly"
+      }
+    ],
+    "special": [
+      {
+        "id": "speed_clicker",
+        "name": "Speed Clicker",
+        "description": "Click 100 times in 10 seconds",
+        "icon": "⚡",
+        "requirement": {"type": "speed_click", "value": 100},
+        "reward": {"coins": 500, "xp": 250},
+        "rarity": "rare"
+      },
+      {
+        "id": "lucky_clicker",
+        "name": "Lucky Clicker",
+        "description": "Get 3 lucky clicks in a row",
+        "icon": "🍀",
+        "requirement": {"type": "lucky_streak", "value": 3},
+        "reward": {"coins": 1000, "xp": 500},
+        "rarity": "epic"
+      },
+      {
+        "id": "combo_master",
+        "name": "Combo Master",
+        "description": "Reach a 50x combo",
+        "icon": "🔥",
+        "requirement": {"type": "max_combo", "value": 50},
+        "reward": {"coins": 2000, "xp": 1000},
+        "rarity": "legendary"
+      },
+      {
+        "id": "daily_streak",
+        "name": "Daily Streak",
+        "description": "Claim daily rewards for 7 days in a row",
+        "icon": "📅",
+        "requirement": {"type": "daily_streak", "value": 7},
+        "reward": {"coins": 1000, "xp": 500},
+        "rarity": "rare"
+      },
+      {
+        "id": "weekly_streak",
+        "name": "Weekly Warrior",
+        "description": "Claim daily rewards for 30 days in a row",
+        "icon": "📆",
+        "requirement": {"type": "daily_streak", "value": 30},
+        "reward": {"coins": 5000, "xp": 2500},
+        "rarity": "epic"
+      },
+      {
+        "id": "yearly_streak",
+        "name": "Yearly Master",
+        "description": "Claim daily rewards for 365 days in a row",
+        "icon": "📅📅",
+        "requirement": {"type": "daily_streak", "value": 365},
+        "reward": {"coins": 50000, "xp": 25000},
+        "rarity": "godly"
+      }
+    ]
+  },
+  "achievement_categories": {
+    "clicking": "Clicking",
+    "coins": "Coins",
+    "diamonds": "Diamonds",
+    "level": "Level",
+    "skins": "Skins",
+    "upgrades": "Upgrades",
+    "autoclickers": "Auto Clickers",
+    "bosses": "Bosses",
+    "minigames": "Minigames",
+    "prestige": "Prestige",
+    "special": "Special"
+  },
+  "achievement_rarities": {
+    "common": {"color": "#6b7280", "multiplier": 1},
+    "rare": {"color": "#3b82f6", "multiplier": 2},
+    "epic": {"color": "#8b5cf6", "multiplier": 3},
+    "legendary": {"color": "#f59e0b", "multiplier": 5},
+    "godly": {"color": "#ef4444", "multiplier": 10}
+  }
+}

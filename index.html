@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Epic Clicker Tycoon RPG</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">🎮</div>
+            <h1>Epic Clicker Tycoon RPG</h1>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Loading your epic adventure...</p>
+        </div>
+    </div>
+
+    <!-- Main Game Container -->
+    <div id="gameContainer" class="game-container hidden">
+        <!-- Header -->
+        <header class="game-header">
+            <div class="header-left">
+                <div class="player-info">
+                    <span class="player-level">Level <span id="playerLevel">1</span></span>
+                    <div class="xp-bar">
+                        <div class="xp-fill" id="xpFill"></div>
+                        <span class="xp-text" id="xpText">0 / 100 XP</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-center">
+                <h1 class="game-title">Epic Clicker Tycoon RPG</h1>
+                <div class="game-version">v2.1.0 - The Ultimate Update</div>
+            </div>
+            
+            <div class="header-right">
+                <div class="currency-display">
+                    <div class="currency-item">
+                        <i class="fas fa-coins"></i>
+                        <span id="coinsDisplay">0</span>
+                    </div>
+                    <div class="currency-item">
+                        <i class="fas fa-gem"></i>
+                        <span id="diamondsDisplay">0</span>
+                    </div>
+                    <div class="currency-item">
+                        <i class="fas fa-star"></i>
+                        <span id="scoreDisplay">0</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="game-nav">
+            <button class="nav-tab active" data-tab="main">🏠 Main</button>
+            <button class="nav-tab" data-tab="shop">🛒 Shop</button>
+            <button class="nav-tab" data-tab="upgrades">⚡ Upgrades</button>
+            <button class="nav-tab" data-tab="inventory">🎒 Inventory</button>
+            <button class="nav-tab" data-tab="achievements">🏆 Achievements</button>
+            <button class="nav-tab" data-tab="bosses">👹 Bosses</button>
+            <button class="nav-tab" data-tab="minigames">🎮 Minigames</button>
+            <button class="nav-tab" data-tab="leaderboard">📊 Leaderboard</button>
+            <button class="nav-tab" data-tab="settings">⚙️ Settings</button>
+        </nav>
+
+        <!-- Main Game Area -->
+        <main class="game-main">
+            <!-- Main Clicking Area -->
+            <section id="mainTab" class="game-tab active">
+                <div class="clicking-area">
+                    <div class="clickable-object" id="clickableObject">
+                        <div class="object-sprite" id="objectSprite">🐉</div>
+                        <div class="object-name" id="objectName">Baby Dragon</div>
+                        <div class="object-level" id="objectLevel">Level 1</div>
+                    </div>
+                    
+                    <div class="click-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Click Power:</span>
+                            <span class="stat-value" id="clickPower">1</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Clicks per Second:</span>
+                            <span class="stat-value" id="cpsDisplay">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Total Clicks:</span>
+                            <span class="stat-value" id="totalClicks">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daily Rewards -->
+                <div class="daily-rewards">
+                    <h3>🎁 Daily Rewards</h3>
+                    <div class="reward-calendar" id="rewardCalendar"></div>
+                    <button class="claim-button" id="claimDailyBtn">Claim Daily Reward</button>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <button class="action-btn" id="mysteryBoxBtn">🎁 Mystery Box</button>
+                    <button class="action-btn" id="spinWheelBtn">🎡 Spin Wheel</button>
+                    <button class="action-btn" id="miniChestBtn">📦 Mini Chest</button>
+                    <button class="action-btn" id="prestigeBtn">🌟 Prestige</button>
+                </div>
+            </section>
+
+            <!-- Shop Tab -->
+            <section id="shopTab" class="game-tab">
+                <div class="shop-container">
+                    <div class="shop-categories">
+                        <button class="category-btn active" data-category="skins">🎨 Skins</button>
+                        <button class="category-btn" data-category="upgrades">⚡ Upgrades</button>
+                        <button class="category-btn" data-category="autoclickers">🤖 Auto Clickers</button>
+                        <button class="category-btn" data-category="effects">✨ Effects</button>
+                        <button class="category-btn" data-category="backgrounds">🖼️ Backgrounds</button>
+                    </div>
+                    
+                    <div class="shop-items" id="shopItems">
+                        <!-- Items will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Upgrades Tab -->
+            <section id="upgradesTab" class="game-tab">
+                <div class="upgrades-container">
+                    <div class="upgrade-tree" id="upgradeTree">
+                        <!-- Upgrade tree will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Inventory Tab -->
+            <section id="inventoryTab" class="game-tab">
+                <div class="inventory-container">
+                    <div class="inventory-tabs">
+                        <button class="inv-tab active" data-inv="skins">🎨 Skins</button>
+                        <button class="inv-tab" data-inv="items">📦 Items</button>
+                        <button class="inv-tab" data-inv="chests">🎁 Chests</button>
+                        <button class="inv-tab" data-inv="achievements">🏆 Achievements</button>
+                    </div>
+                    <div class="inventory-content" id="inventoryContent">
+                        <!-- Inventory content will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Achievements Tab -->
+            <section id="achievementsTab" class="game-tab">
+                <div class="achievements-container">
+                    <div class="achievements-grid" id="achievementsGrid">
+                        <!-- Achievements will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bosses Tab -->
+            <section id="bossesTab" class="game-tab">
+                <div class="bosses-container">
+                    <div class="current-boss" id="currentBoss">
+                        <!-- Current boss will be populated by JavaScript -->
+                    </div>
+                    <div class="boss-list" id="bossList">
+                        <!-- Boss list will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Minigames Tab -->
+            <section id="minigamesTab" class="game-tab">
+                <div class="minigames-container">
+                    <div class="minigame-selector">
+                        <button class="minigame-btn" data-game="flappy">🦅 Flappy Clicker</button>
+                        <button class="minigame-btn" data-game="memory">🧠 Memory Match</button>
+                        <button class="minigame-btn" data-game="reaction">⚡ Reaction Timer</button>
+                        <button class="minigame-btn" data-game="math">🔢 Math Quiz</button>
+                        <button class="minigame-btn" data-game="dungeon">🏰 Dungeon Crawler</button>
+                    </div>
+                    <div class="minigame-area" id="minigameArea">
+                        <!-- Minigame content will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Leaderboard Tab -->
+            <section id="leaderboardTab" class="game-tab">
+                <div class="leaderboard-container">
+                    <div class="leaderboard-filters">
+                        <button class="filter-btn active" data-filter="score">Score</button>
+                        <button class="filter-btn" data-filter="level">Level</button>
+                        <button class="filter-btn" data-filter="clicks">Clicks</button>
+                    </div>
+                    <div class="leaderboard-list" id="leaderboardList">
+                        <!-- Leaderboard will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Tab -->
+            <section id="settingsTab" class="game-tab">
+                <div class="settings-container">
+                    <div class="settings-section">
+                        <h3>🎵 Audio</h3>
+                        <div class="setting-item">
+                            <label>Background Music</label>
+                            <input type="range" id="musicVolume" min="0" max="100" value="50">
+                        </div>
+                        <div class="setting-item">
+                            <label>Sound Effects</label>
+                            <input type="range" id="sfxVolume" min="0" max="100" value="75">
+                        </div>
+                    </div>
+                    
+                    <div class="settings-section">
+                        <h3>🎨 Visual</h3>
+                        <div class="setting-item">
+                            <label>Theme</label>
+                            <select id="themeSelect">
+                                <option value="light">Light</option>
+                                <option value="dark">Dark</option>
+                                <option value="auto">Auto</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <label>Particle Effects</label>
+                            <input type="checkbox" id="particleEffects" checked>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-section">
+                        <h3>💾 Save Data</h3>
+                        <button class="save-btn" id="exportSaveBtn">Export Save</button>
+                        <button class="save-btn" id="importSaveBtn">Import Save</button>
+                        <button class="save-btn danger" id="resetSaveBtn">Reset Game</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Chat System -->
+        <div class="chat-system" id="chatSystem">
+            <div class="chat-header">
+                <span>💬 Game Chat</span>
+                <button class="chat-toggle" id="chatToggle">−</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <!-- Chat messages will be populated by JavaScript -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Type a message...">
+                <button id="chatSend">Send</button>
+            </div>
+        </div>
+
+        <!-- Notifications -->
+        <div class="notifications" id="notifications"></div>
+
+        <!-- Modals -->
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal" id="modal">
+                <div class="modal-header">
+                    <h3 id="modalTitle">Modal Title</h3>
+                    <button class="modal-close" id="modalClose">&times;</button>
+                </div>
+                <div class="modal-content" id="modalContent">
+                    <!-- Modal content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Developer Console (Hidden) -->
+        <div class="dev-console" id="devConsole">
+            <div class="console-header">
+                <span>🔧 Developer Console</span>
+                <button class="console-toggle" id="consoleToggle">−</button>
+            </div>
+            <div class="console-output" id="consoleOutput"></div>
+            <div class="console-input">
+                <input type="text" id="consoleInput" placeholder="Enter command...">
+                <button id="consoleSend">Execute</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="clickSound" preload="auto"></audio>
+    <audio id="backgroundMusic" loop preload="auto"></audio>
+    <audio id="achievementSound" preload="auto"></audio>
+    <audio id="levelUpSound" preload="auto"></audio>
+    <audio id="bossSound" preload="auto"></audio>
+
+    <!-- Scripts -->
+    <script src="js/core/game.js"></script>
+    <script src="js/core/save.js"></script>
+    <script src="js/core/audio.js"></script>
+    <script src="js/systems/particles.js"></script>
+    <script src="js/systems/clicking.js"></script>
+    <script src="js/systems/shop.js"></script>
+    <script src="js/systems/upgrades.js"></script>
+    <script src="js/systems/inventory.js"></script>
+    <script src="js/systems/achievements.js"></script>
+    <script src="js/systems/bosses.js"></script>
+    <script src="js/systems/minigames.js"></script>
+    <script src="js/systems/placeholder-systems.js"></script>
+    <script src="js/systems/utility-systems.js"></script>
+    <script src="js/ui/modals.js"></script>
+    <script src="js/ui/notifications.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

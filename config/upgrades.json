@@ -1,0 +1,273 @@
+{
+  "click_upgrades": [
+    {
+      "id": "click_power_2x",
+      "name": "2x Click Power",
+      "description": "Double your click power",
+      "price": 100,
+      "multiplier": 2,
+      "type": "click_power",
+      "icon": "⚡",
+      "maxLevel": 10
+    },
+    {
+      "id": "click_power_3x",
+      "name": "3x Click Power",
+      "description": "Triple your click power",
+      "price": 500,
+      "multiplier": 3,
+      "type": "click_power",
+      "icon": "⚡⚡",
+      "maxLevel": 8
+    },
+    {
+      "id": "click_power_5x",
+      "name": "5x Click Power",
+      "description": "Multiply click power by 5",
+      "price": 2000,
+      "multiplier": 5,
+      "type": "click_power",
+      "icon": "⚡⚡⚡",
+      "maxLevel": 5
+    },
+    {
+      "id": "click_power_10x",
+      "name": "10x Click Power",
+      "description": "Multiply click power by 10",
+      "price": 10000,
+      "multiplier": 10,
+      "type": "click_power",
+      "icon": "⚡⚡⚡⚡",
+      "maxLevel": 3
+    }
+  ],
+  "autoclickers": [
+    {
+      "id": "basic_autoclicker",
+      "name": "Basic Auto Clicker",
+      "description": "Automatically clicks once per second",
+      "price": 50,
+      "clicksPerSecond": 1,
+      "type": "autoclicker",
+      "icon": "🤖",
+      "maxLevel": 20
+    },
+    {
+      "id": "advanced_autoclicker",
+      "name": "Advanced Auto Clicker",
+      "description": "Automatically clicks 5 times per second",
+      "price": 500,
+      "clicksPerSecond": 5,
+      "type": "autoclicker",
+      "icon": "🤖⚡",
+      "maxLevel": 15
+    },
+    {
+      "id": "super_autoclicker",
+      "name": "Super Auto Clicker",
+      "description": "Automatically clicks 20 times per second",
+      "price": 5000,
+      "clicksPerSecond": 20,
+      "type": "autoclicker",
+      "icon": "🤖⚡⚡",
+      "maxLevel": 10
+    },
+    {
+      "id": "mega_autoclicker",
+      "name": "Mega Auto Clicker",
+      "description": "Automatically clicks 100 times per second",
+      "price": 50000,
+      "clicksPerSecond": 100,
+      "type": "autoclicker",
+      "icon": "🤖⚡⚡⚡",
+      "maxLevel": 5
+    },
+    {
+      "id": "ultimate_autoclicker",
+      "name": "Ultimate Auto Clicker",
+      "description": "Automatically clicks 1000 times per second",
+      "price": 1000000,
+      "clicksPerSecond": 1000,
+      "type": "autoclicker",
+      "icon": "🤖⚡⚡⚡⚡",
+      "maxLevel": 3
+    }
+  ],
+  "multipliers": [
+    {
+      "id": "coin_multiplier_2x",
+      "name": "2x Coin Multiplier",
+      "description": "Double coin earnings",
+      "price": 200,
+      "multiplier": 2,
+      "type": "coin_multiplier",
+      "icon": "🪙",
+      "maxLevel": 10
+    },
+    {
+      "id": "coin_multiplier_5x",
+      "name": "5x Coin Multiplier",
+      "description": "Multiply coin earnings by 5",
+      "price": 2000,
+      "multiplier": 5,
+      "type": "coin_multiplier",
+      "icon": "🪙🪙",
+      "maxLevel": 5
+    },
+    {
+      "id": "diamond_multiplier_2x",
+      "name": "2x Diamond Multiplier",
+      "description": "Double diamond earnings",
+      "price": 1000,
+      "multiplier": 2,
+      "type": "diamond_multiplier",
+      "icon": "💎",
+      "maxLevel": 8
+    },
+    {
+      "id": "score_multiplier_2x",
+      "name": "2x Score Multiplier",
+      "description": "Double score earnings",
+      "price": 500,
+      "multiplier": 2,
+      "type": "score_multiplier",
+      "icon": "⭐",
+      "maxLevel": 10
+    }
+  ],
+  "special_upgrades": [
+    {
+      "id": "critical_click",
+      "name": "Critical Click",
+      "description": "10% chance to deal 3x damage",
+      "price": 1000,
+      "chance": 0.1,
+      "multiplier": 3,
+      "type": "critical",
+      "icon": "🎯",
+      "maxLevel": 5
+    },
+    {
+      "id": "double_click",
+      "name": "Double Click",
+      "description": "5% chance to click twice",
+      "price": 2000,
+      "chance": 0.05,
+      "type": "double_click",
+      "icon": "👆👆",
+      "maxLevel": 3
+    },
+    {
+      "id": "lucky_click",
+      "name": "Lucky Click",
+      "description": "1% chance to get 100x coins",
+      "price": 5000,
+      "chance": 0.01,
+      "multiplier": 100,
+      "type": "lucky",
+      "icon": "🍀",
+      "maxLevel": 2
+    },
+    {
+      "id": "combo_click",
+      "name": "Combo Click",
+      "description": "Build up combo multiplier with rapid clicks",
+      "price": 3000,
+      "maxCombo": 10,
+      "type": "combo",
+      "icon": "🔥",
+      "maxLevel": 1
+    }
+  ],
+  "prestige_upgrades": [
+    {
+      "id": "prestige_multiplier",
+      "name": "Prestige Multiplier",
+      "description": "Permanent 2x multiplier from prestige",
+      "price": 10000,
+      "multiplier": 2,
+      "type": "prestige",
+      "icon": "🌟",
+      "requiresPrestige": 1
+    },
+    {
+      "id": "prestige_autoclicker",
+      "name": "Prestige Auto Clicker",
+      "description": "Permanent auto clicker from prestige",
+      "price": 50000,
+      "clicksPerSecond": 10,
+      "type": "prestige_autoclicker",
+      "icon": "🤖🌟",
+      "requiresPrestige": 2
+    },
+    {
+      "id": "prestige_skin",
+      "name": "Prestige Skin",
+      "description": "Unlock exclusive prestige skin",
+      "price": 100000,
+      "type": "prestige_skin",
+      "icon": "👑",
+      "requiresPrestige": 3
+    }
+  ],
+  "upgrade_tree": {
+    "nodes": [
+      {
+        "id": "click_mastery",
+        "name": "Click Mastery",
+        "description": "Master the art of clicking",
+        "position": {"x": 0, "y": 0},
+        "requirements": [],
+        "effects": {"clickPower": 2}
+      },
+      {
+        "id": "speed_clicking",
+        "name": "Speed Clicking",
+        "description": "Click faster than ever",
+        "position": {"x": 1, "y": 0},
+        "requirements": ["click_mastery"],
+        "effects": {"clickSpeed": 1.5}
+      },
+      {
+        "id": "power_clicking",
+        "name": "Power Clicking",
+        "description": "Each click packs more punch",
+        "position": {"x": 0, "y": 1},
+        "requirements": ["click_mastery"],
+        "effects": {"clickPower": 3}
+      },
+      {
+        "id": "auto_mastery",
+        "name": "Auto Mastery",
+        "description": "Master automatic clicking",
+        "position": {"x": 2, "y": 0},
+        "requirements": ["speed_clicking"],
+        "effects": {"autoclickerPower": 2}
+      },
+      {
+        "id": "critical_mastery",
+        "name": "Critical Mastery",
+        "description": "Master critical hits",
+        "position": {"x": 1, "y": 1},
+        "requirements": ["power_clicking"],
+        "effects": {"criticalChance": 0.1, "criticalMultiplier": 2}
+      },
+      {
+        "id": "ultimate_clicking",
+        "name": "Ultimate Clicking",
+        "description": "The ultimate clicking technique",
+        "position": {"x": 2, "y": 1},
+        "requirements": ["auto_mastery", "critical_mastery"],
+        "effects": {"clickPower": 5, "autoclickerPower": 3, "criticalChance": 0.2}
+      }
+    ],
+    "connections": [
+      {"from": "click_mastery", "to": "speed_clicking"},
+      {"from": "click_mastery", "to": "power_clicking"},
+      {"from": "speed_clicking", "to": "auto_mastery"},
+      {"from": "power_clicking", "to": "critical_mastery"},
+      {"from": "auto_mastery", "to": "ultimate_clicking"},
+      {"from": "critical_mastery", "to": "ultimate_clicking"}
+    ]
+  }
+}

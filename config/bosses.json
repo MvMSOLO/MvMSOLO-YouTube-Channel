@@ -1,0 +1,374 @@
+{
+  "bosses": [
+    {
+      "id": "goblin_chief",
+      "name": "Goblin Chief",
+      "emoji": "👺",
+      "health": 1000,
+      "damage": 10,
+      "level": 1,
+      "description": "A mischievous goblin leader",
+      "abilities": ["steal_coins"],
+      "rewards": {
+        "coins": 100,
+        "xp": 50,
+        "diamonds": 1
+      },
+      "unlock_requirement": {"level": 1}
+    },
+    {
+      "id": "orc_warrior",
+      "name": "Orc Warrior",
+      "emoji": "👹",
+      "health": 5000,
+      "damage": 25,
+      "level": 5,
+      "description": "A fierce orc warrior",
+      "abilities": ["rage_mode", "shield_block"],
+      "rewards": {
+        "coins": 500,
+        "xp": 250,
+        "diamonds": 5
+      },
+      "unlock_requirement": {"level": 5}
+    },
+    {
+      "id": "troll_king",
+      "name": "Troll King",
+      "emoji": "🧌",
+      "health": 25000,
+      "damage": 100,
+      "level": 10,
+      "description": "The mighty troll king",
+      "abilities": ["regeneration", "stone_skin", "earthquake"],
+      "rewards": {
+        "coins": 2000,
+        "xp": 1000,
+        "diamonds": 20
+      },
+      "unlock_requirement": {"level": 10}
+    },
+    {
+      "id": "dragon_wyrmling",
+      "name": "Dragon Wyrmling",
+      "emoji": "🐉",
+      "health": 100000,
+      "damage": 500,
+      "level": 20,
+      "description": "A young but dangerous dragon",
+      "abilities": ["fire_breath", "wing_gust", "dragon_fear"],
+      "rewards": {
+        "coins": 10000,
+        "xp": 5000,
+        "diamonds": 100
+      },
+      "unlock_requirement": {"level": 20}
+    },
+    {
+      "id": "ice_giant",
+      "name": "Ice Giant",
+      "emoji": "🧊",
+      "health": 500000,
+      "damage": 2000,
+      "level": 30,
+      "description": "A massive ice giant",
+      "abilities": ["ice_storm", "frozen_ground", "blizzard"],
+      "rewards": {
+        "coins": 50000,
+        "xp": 25000,
+        "diamonds": 500
+      },
+      "unlock_requirement": {"level": 30}
+    },
+    {
+      "id": "fire_demon",
+      "name": "Fire Demon",
+      "emoji": "🔥",
+      "health": 2000000,
+      "damage": 10000,
+      "level": 50,
+      "description": "A demon from the depths of hell",
+      "abilities": ["hellfire", "demon_rage", "inferno"],
+      "rewards": {
+        "coins": 200000,
+        "xp": 100000,
+        "diamonds": 2000
+      },
+      "unlock_requirement": {"level": 50}
+    },
+    {
+      "id": "shadow_lord",
+      "name": "Shadow Lord",
+      "emoji": "👤",
+      "health": 10000000,
+      "damage": 50000,
+      "level": 75,
+      "description": "Master of shadows and darkness",
+      "abilities": ["shadow_step", "void_pull", "darkness_aura"],
+      "rewards": {
+        "coins": 1000000,
+        "xp": 500000,
+        "diamonds": 10000
+      },
+      "unlock_requirement": {"level": 75}
+    },
+    {
+      "id": "cosmic_entity",
+      "name": "Cosmic Entity",
+      "emoji": "🌌",
+      "health": 100000000,
+      "damage": 250000,
+      "level": 100,
+      "description": "A being from beyond the stars",
+      "abilities": ["cosmic_storm", "reality_warp", "star_burst"],
+      "rewards": {
+        "coins": 10000000,
+        "xp": 5000000,
+        "diamonds": 100000
+      },
+      "unlock_requirement": {"level": 100}
+    },
+    {
+      "id": "time_guardian",
+      "name": "Time Guardian",
+      "emoji": "⏰",
+      "health": 1000000000,
+      "damage": 1000000,
+      "level": 200,
+      "description": "Guardian of the time stream",
+      "abilities": ["time_stop", "temporal_loop", "chrono_blast"],
+      "rewards": {
+        "coins": 100000000,
+        "xp": 50000000,
+        "diamonds": 1000000
+      },
+      "unlock_requirement": {"level": 200}
+    },
+    {
+      "id": "void_emperor",
+      "name": "Void Emperor",
+      "emoji": "🕳️",
+      "health": 10000000000,
+      "damage": 5000000,
+      "level": 500,
+      "description": "Emperor of the void",
+      "abilities": ["void_creation", "reality_end", "cosmic_destruction"],
+      "rewards": {
+        "coins": 1000000000,
+        "xp": 500000000,
+        "diamonds": 10000000
+      },
+      "unlock_requirement": {"level": 500}
+    }
+  ],
+  "boss_abilities": {
+    "steal_coins": {
+      "name": "Steal Coins",
+      "description": "Steals 10% of your coins",
+      "effect": "steal_coins",
+      "value": 0.1,
+      "cooldown": 30
+    },
+    "rage_mode": {
+      "name": "Rage Mode",
+      "description": "Increases damage by 50%",
+      "effect": "damage_boost",
+      "value": 1.5,
+      "cooldown": 60
+    },
+    "shield_block": {
+      "name": "Shield Block",
+      "description": "Reduces damage taken by 75%",
+      "effect": "damage_reduction",
+      "value": 0.25,
+      "cooldown": 45
+    },
+    "regeneration": {
+      "name": "Regeneration",
+      "description": "Heals 5% of max health per second",
+      "effect": "heal_over_time",
+      "value": 0.05,
+      "cooldown": 0
+    },
+    "stone_skin": {
+      "name": "Stone Skin",
+      "description": "Reduces damage taken by 90%",
+      "effect": "damage_reduction",
+      "value": 0.1,
+      "cooldown": 90
+    },
+    "earthquake": {
+      "name": "Earthquake",
+      "description": "Deals massive area damage",
+      "effect": "area_damage",
+      "value": 200,
+      "cooldown": 120
+    },
+    "fire_breath": {
+      "name": "Fire Breath",
+      "description": "Deals fire damage over time",
+      "effect": "dot_damage",
+      "value": 50,
+      "cooldown": 30
+    },
+    "wing_gust": {
+      "name": "Wing Gust",
+      "description": "Knocks back and stuns",
+      "effect": "knockback_stun",
+      "value": 2,
+      "cooldown": 45
+    },
+    "dragon_fear": {
+      "name": "Dragon Fear",
+      "description": "Reduces player damage by 50%",
+      "effect": "player_damage_reduction",
+      "value": 0.5,
+      "cooldown": 60
+    },
+    "ice_storm": {
+      "name": "Ice Storm",
+      "description": "Deals ice damage and slows",
+      "effect": "ice_damage_slow",
+      "value": 100,
+      "cooldown": 40
+    },
+    "frozen_ground": {
+      "name": "Frozen Ground",
+      "description": "Creates slippery terrain",
+      "effect": "terrain_effect",
+      "value": "ice",
+      "cooldown": 60
+    },
+    "blizzard": {
+      "name": "Blizzard",
+      "description": "Massive ice storm attack",
+      "effect": "massive_ice_damage",
+      "value": 500,
+      "cooldown": 180
+    },
+    "hellfire": {
+      "name": "Hellfire",
+      "description": "Burns with hellish flames",
+      "effect": "hellfire_damage",
+      "value": 200,
+      "cooldown": 30
+    },
+    "demon_rage": {
+      "name": "Demon Rage",
+      "description": "Increases all stats by 100%",
+      "effect": "stat_boost",
+      "value": 2,
+      "cooldown": 120
+    },
+    "inferno": {
+      "name": "Inferno",
+      "description": "Creates a burning inferno",
+      "effect": "inferno_damage",
+      "value": 1000,
+      "cooldown": 300
+    },
+    "shadow_step": {
+      "name": "Shadow Step",
+      "description": "Teleports and becomes invisible",
+      "effect": "teleport_invisible",
+      "value": 3,
+      "cooldown": 45
+    },
+    "void_pull": {
+      "name": "Void Pull",
+      "description": "Pulls player into the void",
+      "effect": "void_damage",
+      "value": 300,
+      "cooldown": 60
+    },
+    "darkness_aura": {
+      "name": "Darkness Aura",
+      "description": "Creates an aura of darkness",
+      "effect": "darkness_effect",
+      "value": "darkness",
+      "cooldown": 90
+    },
+    "cosmic_storm": {
+      "name": "Cosmic Storm",
+      "description": "Summons a cosmic storm",
+      "effect": "cosmic_damage",
+      "value": 500,
+      "cooldown": 60
+    },
+    "reality_warp": {
+      "name": "Reality Warp",
+      "description": "Warps reality around you",
+      "effect": "reality_warp",
+      "value": "warp",
+      "cooldown": 120
+    },
+    "star_burst": {
+      "name": "Star Burst",
+      "description": "Explodes like a dying star",
+      "effect": "star_explosion",
+      "value": 1000,
+      "cooldown": 300
+    },
+    "time_stop": {
+      "name": "Time Stop",
+      "description": "Stops time for 5 seconds",
+      "effect": "time_stop",
+      "value": 5,
+      "cooldown": 180
+    },
+    "temporal_loop": {
+      "name": "Temporal Loop",
+      "description": "Creates a time loop",
+      "effect": "time_loop",
+      "value": "loop",
+      "cooldown": 240
+    },
+    "chrono_blast": {
+      "name": "Chrono Blast",
+      "description": "Blasts with temporal energy",
+      "effect": "temporal_damage",
+      "value": 2000,
+      "cooldown": 120
+    },
+    "void_creation": {
+      "name": "Void Creation",
+      "description": "Creates void portals",
+      "effect": "void_portals",
+      "value": "portals",
+      "cooldown": 90
+    },
+    "reality_end": {
+      "name": "Reality End",
+      "description": "Ends reality as we know it",
+      "effect": "reality_end",
+      "value": "end",
+      "cooldown": 600
+    },
+    "cosmic_destruction": {
+      "name": "Cosmic Destruction",
+      "description": "Destroys on a cosmic scale",
+      "effect": "cosmic_destruction",
+      "value": 5000,
+      "cooldown": 600
+    }
+  },
+  "boss_phases": {
+    "normal": {
+      "name": "Normal Phase",
+      "damage_multiplier": 1,
+      "health_multiplier": 1
+    },
+    "enraged": {
+      "name": "Enraged Phase",
+      "damage_multiplier": 2,
+      "health_multiplier": 1.5,
+      "trigger": 0.5
+    },
+    "berserk": {
+      "name": "Berserk Phase",
+      "damage_multiplier": 3,
+      "health_multiplier": 2,
+      "trigger": 0.25
+    }
+  }
+}
