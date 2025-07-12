@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Clicker Tycoon RPG</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Header -->
+        <header id="game-header">
+            <div class="header-left">
+                <h1 class="game-title">🐉 Dragon Clicker Tycoon</h1>
+                <div class="version">v2.0.0</div>
+            </div>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Score:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Coins:</span>
+                    <span id="coins">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Diamonds:</span>
+                    <span id="diamonds">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Level:</span>
+                    <span id="level">1</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <button id="settings-btn" class="icon-btn">⚙️</button>
+                <button id="leaderboard-btn" class="icon-btn">🏆</button>
+                <button id="achievements-btn" class="icon-btn">🏅</button>
+            </div>
+        </header>
+
+        <!-- Main Game Area -->
+        <main id="game-main">
+            <!-- Left Panel -->
+            <div id="left-panel" class="panel">
+                <div class="panel-header">
+                    <h3>🏪 Shop</h3>
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="skins">Skins</button>
+                        <button class="tab-btn" data-tab="upgrades">Upgrades</button>
+                        <button class="tab-btn" data-tab="auto">Auto</button>
+                    </div>
+                </div>
+                <div class="panel-content">
+                    <div id="shop-content">
+                        <div class="shop-tab active" id="skins-tab">
+                            <div class="shop-filter">
+                                <select id="skin-filter">
+                                    <option value="all">All Rarities</option>
+                                    <option value="common">Common</option>
+                                    <option value="rare">Rare</option>
+                                    <option value="epic">Epic</option>
+                                    <option value="legendary">Legendary</option>
+                                    <option value="mythic">Mythic</option>
+                                    <option value="godly">Godly</option>
+                                </select>
+                            </div>
+                            <div id="skins-grid" class="shop-grid"></div>
+                        </div>
+                        <div class="shop-tab" id="upgrades-tab">
+                            <div id="upgrades-grid" class="shop-grid"></div>
+                        </div>
+                        <div class="shop-tab" id="auto-tab">
+                            <div id="auto-grid" class="shop-grid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Panel -->
+            <div id="center-panel" class="panel">
+                <div class="game-area">
+                    <div id="progress-bars">
+                        <div class="progress-container">
+                            <div class="progress-label">XP</div>
+                            <div class="progress-bar">
+                                <div id="xp-progress" class="progress-fill"></div>
+                                <span id="xp-text">0 / 100</span>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-label">Boss HP</div>
+                            <div class="progress-bar boss-bar">
+                                <div id="boss-hp-progress" class="progress-fill"></div>
+                                <span id="boss-hp-text">1000 / 1000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="main-clicker-area">
+                        <div id="click-multiplier" class="multiplier-display">x1</div>
+                        <div id="clicker-container">
+                            <div id="main-clicker" class="clicker">
+                                <div class="clicker-image">🐉</div>
+                                <div class="clicker-glow"></div>
+                            </div>
+                            <div id="damage-text-container"></div>
+                        </div>
+                        <div id="boss-info" class="boss-info">
+                            <div class="boss-name">Ancient Dragon</div>
+                            <div class="boss-level">Level 1</div>
+                        </div>
+                    </div>
+
+                    <div id="game-stats">
+                        <div class="stat-row">
+                            <div class="stat-item">CPS: <span id="cps">0</span></div>
+                            <div class="stat-item">DPS: <span id="dps">1</span></div>
+                            <div class="stat-item">Combo: <span id="combo">0</span></div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-item">Prestige: <span id="prestige-level">0</span></div>
+                            <div class="stat-item">Total Clicks: <span id="total-clicks">0</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel -->
+            <div id="right-panel" class="panel">
+                <div class="panel-header">
+                    <h3>⚡ Activities</h3>
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="quests">Quests</button>
+                        <button class="tab-btn" data-tab="daily">Daily</button>
+                        <button class="tab-btn" data-tab="inventory">Inventory</button>
+                    </div>
+                </div>
+                <div class="panel-content">
+                    <div id="activities-content">
+                        <div class="activity-tab active" id="quests-tab">
+                            <div id="quests-list"></div>
+                        </div>
+                        <div class="activity-tab" id="daily-tab">
+                            <div id="daily-content">
+                                <div class="daily-section">
+                                    <h4>🎁 Daily Rewards</h4>
+                                    <div id="daily-rewards"></div>
+                                </div>
+                                <div class="daily-section">
+                                    <h4>🎰 Spin Wheel</h4>
+                                    <div id="spin-wheel-container">
+                                        <div id="spin-wheel"></div>
+                                        <button id="spin-btn" class="action-btn">Spin! (Free)</button>
+                                    </div>
+                                </div>
+                                <div class="daily-section">
+                                    <h4>📦 Mystery Box</h4>
+                                    <button id="mystery-box-btn" class="action-btn">Open Box (100 coins)</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="activity-tab" id="inventory-tab">
+                            <div id="inventory-grid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Panel -->
+        <footer id="game-footer">
+            <div class="footer-section">
+                <button id="minigames-btn" class="footer-btn">🎮 Minigames</button>
+                <button id="prestige-btn" class="footer-btn">✨ Prestige</button>
+                <button id="rebirth-btn" class="footer-btn">🔄 Rebirth</button>
+            </div>
+            <div class="footer-section">
+                <button id="auto-save-toggle" class="footer-btn">💾 Auto Save: ON</button>
+                <button id="export-btn" class="footer-btn">📤 Export</button>
+                <button id="import-btn" class="footer-btn">📥 Import</button>
+            </div>
+            <div class="footer-section">
+                <button id="theme-toggle" class="footer-btn">🌙 Dark Mode</button>
+                <button id="particles-toggle" class="footer-btn">✨ Particles: ON</button>
+                <button id="sound-toggle" class="footer-btn">🔊 Sound: ON</button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modals -->
+    <div id="modal-overlay" class="modal-overlay hidden">
+        <div id="modal-content" class="modal-content">
+            <button id="modal-close" class="modal-close">×</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Particles Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Scripts -->
+    <script src="config/skins.js"></script>
+    <script src="config/upgrades.js"></script>
+    <script src="config/achievements.js"></script>
+    <script src="modules/gameCore.js"></script>
+    <script src="modules/shop.js"></script>
+    <script src="modules/particles.js"></script>
+    <script src="modules/minigames.js"></script>
+    <script src="modules/achievements.js"></script>
+    <script src="modules/audio.js"></script>
+    <script src="modules/ui.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
