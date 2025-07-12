@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Epic Clicker Tycoon RPG 🎮</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">🎮</div>
+            <h1>Epic Clicker Tycoon RPG</h1>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Loading your epic adventure...</p>
+        </div>
+    </div>
+
+    <!-- Main Game Container -->
+    <div id="gameContainer" class="game-container hidden">
+        <!-- Background Effects -->
+        <div id="backgroundEffects" class="background-effects">
+            <div id="particles" class="particles"></div>
+            <div id="weather" class="weather"></div>
+        </div>
+
+        <!-- Top HUD -->
+        <div class="top-hud">
+            <div class="hud-left">
+                <div class="currency-display">
+                    <div class="currency-item">
+                        <i class="fas fa-coins"></i>
+                        <span id="coinsDisplay">0</span>
+                    </div>
+                    <div class="currency-item">
+                        <i class="fas fa-gem"></i>
+                        <span id="diamondsDisplay">0</span>
+                    </div>
+                    <div class="currency-item">
+                        <i class="fas fa-star"></i>
+                        <span id="scoreDisplay">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hud-center">
+                <div class="level-display">
+                    <div class="level-bar">
+                        <div class="level-progress" id="levelProgress"></div>
+                    </div>
+                    <span id="levelDisplay">Level 1</span>
+                </div>
+            </div>
+            <div class="hud-right">
+                <div class="hud-buttons">
+                    <button id="settingsBtn" class="hud-btn" title="Settings">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                    <button id="achievementsBtn" class="hud-btn" title="Achievements">
+                        <i class="fas fa-trophy"></i>
+                    </button>
+                    <button id="leaderboardBtn" class="hud-btn" title="Leaderboard">
+                        <i class="fas fa-chart-line"></i>
+                    </button>
+                    <button id="dailyBtn" class="hud-btn" title="Daily Rewards">
+                        <i class="fas fa-gift"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Game Area -->
+        <div class="main-game-area">
+            <!-- Central Clickable Object -->
+            <div id="clickableObject" class="clickable-object">
+                <div id="objectImage" class="object-image">🐉</div>
+                <div id="damageText" class="damage-text"></div>
+                <div id="clickEffects" class="click-effects"></div>
+            </div>
+
+            <!-- Click Stats -->
+            <div class="click-stats">
+                <div class="stat-item">
+                    <span>Click Power:</span>
+                    <span id="clickPower">1</span>
+                </div>
+                <div class="stat-item">
+                    <span>Clicks/Second:</span>
+                    <span id="clicksPerSecond">0</span>
+                </div>
+                <div class="stat-item">
+                    <span>Total Clicks:</span>
+                    <span id="totalClicks">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <button class="nav-btn active" data-tab="shop">
+                <i class="fas fa-store"></i>
+                <span>Shop</span>
+            </button>
+            <button class="nav-btn" data-tab="upgrades">
+                <i class="fas fa-arrow-up"></i>
+                <span>Upgrades</span>
+            </button>
+            <button class="nav-btn" data-tab="skins">
+                <i class="fas fa-palette"></i>
+                <span>Skins</span>
+            </button>
+            <button class="nav-btn" data-tab="bosses">
+                <i class="fas fa-dragon"></i>
+                <span>Bosses</span>
+            </button>
+            <button class="nav-btn" data-tab="minigames">
+                <i class="fas fa-gamepad"></i>
+                <span>Minigames</span>
+            </button>
+            <button class="nav-btn" data-tab="inventory">
+                <i class="fas fa-backpack"></i>
+                <span>Inventory</span>
+            </button>
+            <button class="nav-btn" data-tab="prestige">
+                <i class="fas fa-infinity"></i>
+                <span>Prestige</span>
+            </button>
+        </div>
+
+        <!-- Tab Content Areas -->
+        <div class="tab-content">
+            <!-- Shop Tab -->
+            <div id="shopTab" class="tab-panel active">
+                <div class="shop-categories">
+                    <button class="category-btn active" data-category="upgrades">Upgrades</button>
+                    <button class="category-btn" data-category="autoClickers">Auto Clickers</button>
+                    <button class="category-btn" data-category="multipliers">Multipliers</button>
+                    <button class="category-btn" data-category="special">Special</button>
+                </div>
+                <div id="shopItems" class="shop-items"></div>
+            </div>
+
+            <!-- Upgrades Tab -->
+            <div id="upgradesTab" class="tab-panel">
+                <div class="upgrade-tree">
+                    <div class="tree-branch" data-branch="clicking">
+                        <h3>Clicking Mastery</h3>
+                        <div class="upgrade-nodes"></div>
+                    </div>
+                    <div class="tree-branch" data-branch="automation">
+                        <h3>Automation</h3>
+                        <div class="upgrade-nodes"></div>
+                    </div>
+                    <div class="tree-branch" data-branch="multipliers">
+                        <h3>Multipliers</h3>
+                        <div class="upgrade-nodes"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skins Tab -->
+            <div id="skinsTab" class="tab-panel">
+                <div class="skin-filters">
+                    <button class="filter-btn active" data-rarity="all">All</button>
+                    <button class="filter-btn" data-rarity="common">Common</button>
+                    <button class="filter-btn" data-rarity="rare">Rare</button>
+                    <button class="filter-btn" data-rarity="epic">Epic</button>
+                    <button class="filter-btn" data-rarity="legendary">Legendary</button>
+                    <button class="filter-btn" data-rarity="godly">Godly</button>
+                </div>
+                <div id="skinsGrid" class="skins-grid"></div>
+            </div>
+
+            <!-- Bosses Tab -->
+            <div id="bossesTab" class="tab-panel">
+                <div class="boss-arena">
+                    <div id="bossDisplay" class="boss-display">
+                        <div class="boss-health-bar">
+                            <div id="bossHealth" class="boss-health"></div>
+                        </div>
+                        <div id="bossImage" class="boss-image">👹</div>
+                        <div id="bossName" class="boss-name">No Boss Active</div>
+                    </div>
+                    <div class="boss-list">
+                        <h3>Available Bosses</h3>
+                        <div id="bossList" class="boss-list-items"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Minigames Tab -->
+            <div id="minigamesTab" class="tab-panel">
+                <div class="minigames-grid">
+                    <div class="minigame-card" data-game="flappy">
+                        <h3>Flappy Clicker</h3>
+                        <p>Click to fly and collect coins!</p>
+                        <button class="play-btn">Play</button>
+                    </div>
+                    <div class="minigame-card" data-game="memory">
+                        <h3>Memory Match</h3>
+                        <p>Find matching pairs for rewards!</p>
+                        <button class="play-btn">Play</button>
+                    </div>
+                    <div class="minigame-card" data-game="reaction">
+                        <h3>Reaction Timer</h3>
+                        <p>Test your reflexes!</p>
+                        <button class="play-btn">Play</button>
+                    </div>
+                    <div class="minigame-card" data-game="math">
+                        <h3>Math Quiz</h3>
+                        <p>Solve equations for bonuses!</p>
+                        <button class="play-btn">Play</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inventory Tab -->
+            <div id="inventoryTab" class="tab-panel">
+                <div class="inventory-tabs">
+                    <button class="inv-tab-btn active" data-inv-tab="skins">Skins</button>
+                    <button class="inv-tab-btn" data-inv-tab="items">Items</button>
+                    <button class="inv-tab-btn" data-inv-tab="chests">Chests</button>
+                </div>
+                <div id="inventoryContent" class="inventory-content"></div>
+            </div>
+
+            <!-- Prestige Tab -->
+            <div id="prestigeTab" class="tab-panel">
+                <div class="prestige-info">
+                    <h3>Prestige System</h3>
+                    <p>Reset your progress for permanent bonuses!</p>
+                    <div class="prestige-stats">
+                        <div class="prestige-stat">
+                            <span>Current Prestige Level:</span>
+                            <span id="prestigeLevel">0</span>
+                        </div>
+                        <div class="prestige-stat">
+                            <span>Prestige Multiplier:</span>
+                            <span id="prestigeMultiplier">1x</span>
+                        </div>
+                    </div>
+                    <button id="prestigeBtn" class="prestige-btn" disabled>Prestige (Requires 1M Score)</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <div id="modalContainer" class="modal-container"></div>
+
+        <!-- Notifications -->
+        <div id="notificationContainer" class="notification-container"></div>
+
+        <!-- Developer Console (Hidden) -->
+        <div id="devConsole" class="dev-console hidden">
+            <div class="console-header">
+                <span>Developer Console</span>
+                <button id="closeConsole" class="close-btn">×</button>
+            </div>
+            <div class="console-content">
+                <input type="text" id="consoleInput" placeholder="Enter command..." />
+                <div id="consoleOutput"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="config/skins.js"></script>
+    <script src="config/upgrades.js"></script>
+    <script src="config/bosses.js"></script>
+    <script src="config/achievements.js"></script>
+    <script src="js/core/game.js"></script>
+    <script src="js/core/save.js"></script>
+    <script src="js/core/audio.js"></script>
+    <script src="js/core/particles.js"></script>
+    <script src="js/systems/currency.js"></script>
+    <script src="js/systems/upgrades.js"></script>
+    <script src="js/systems/skins.js"></script>
+    <script src="js/systems/bosses.js"></script>
+    <script src="js/systems/achievements.js"></script>
+    <script src="js/systems/daily.js"></script>
+    <script src="js/systems/prestige.js"></script>
+    <script src="js/systems/inventory.js"></script>
+    <script src="js/minigames/flappy.js"></script>
+    <script src="js/minigames/memory.js"></script>
+    <script src="js/minigames/reaction.js"></script>
+    <script src="js/minigames/math.js"></script>
+    <script src="js/ui/modals.js"></script>
+    <script src="js/ui/notifications.js"></script>
+    <script src="js/ui/animations.js"></script>
+    <script src="js/ui/leaderboard.js"></script>
+    <script src="js/ai/assistant.js"></script>
+    <script src="js/ai/suggestions.js"></script>
+    <script src="js/events/events.js"></script>
+    <script src="js/events/weather.js"></script>
+    <script src="js/cheats/console.js"></script>
+    <script src="js/cheats/secret.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
